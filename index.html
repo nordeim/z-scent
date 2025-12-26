@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Scent - Artisan Aromatherapy & Wellness Essentials. Handcrafted in small batches.">
+    <title>The Scent | Artisan Aromatherapy</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <p>Free shipping on orders over $75 — Summer Collection now live</p>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle" aria-label="Toggle Navigation" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 6C20 6 8 16 8 24C8 29.5228 12.4772 34 18 34C23.5228 34 28 29.5228 28 24C28 16 20 6 20 6Z" fill="currentColor" fill-opacity="0.2"/>
+                    <path d="M20 10C20 10 11 18 11 24C11 27.866 14.134 31 18 31C21.866 31 25 27.866 25 24C25 18 20 10 20 10Z" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span class="logo-text">The Scent</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="nav desktop-only">
+                <ul class="nav__list">
+                    <li><a href="#about" class="nav__link">Philosophy</a></li>
+                    <li><a href="#collection" class="nav__link">Collection</a></li>
+                    <li><a href="#rituals" class="nav__link">Rituals</a></li>
+                    <li><a href="#contact" class="nav__link">Journal</a></li>
+                </ul>
+            </nav>
+
+            <!-- Icons -->
+            <div class="header__actions">
+                <button class="icon-btn" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+                <button class="icon-btn" aria-label="Cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 01-8 0"></path></svg>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg-gradient"></div>
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <span class="tag animate-fade-up">New Arrival</span>
+                    <h1 class="hero__title animate-fade-up">
+                        Nature's Alchemy <br> <em>For the Soul</em>
+                    </h1>
+                    <p class="hero__text animate-fade-up">
+                        Discover our small-batch essential oils and botanical blends designed to restore balance and elevate your daily rituals.
+                    </p>
+                    <div class="hero__cta animate-fade-up">
+                        <a href="#collection" class="btn btn--primary">Shop Collection</a>
+                        <a href="#about" class="btn btn--glass">Watch Story</a>
+                    </div>
+                </div>
+                
+                <!-- Visual Composition (CSS/SVG Art) -->
+                <div class="hero__visual animate-scale-in">
+                    <!-- Abstract Blobs -->
+                    <div class="blob blob-1"></div>
+                    <div class="blob blob-2"></div>
+                    
+                    <!-- Stylized Bottle SVG -->
+                    <svg class="hero-bottle" viewBox="0 0 200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Liquid -->
+                        <path d="M40 180H160L155 380C155 390.5 146.5 399 136 399H64C53.5 399 45 390.5 45 380L40 180Z" fill="url(#liquidGradient)"/>
+                        <!-- Glass Body -->
+                        <path d="M30 180H170C170 180 165 150 150 120H50C35 150 30 180 30 180Z" stroke="currentColor" stroke-width="2" fill="white" fill-opacity="0.1"/>
+                        <!-- Cap -->
+                        <rect x="70" y="50" width="60" height="70" rx="4" fill="currentColor" fill-opacity="0.9"/>
+                        <!-- Label -->
+                        <rect x="60" y="220" width="80" height="120" rx="2" fill="white" fill-opacity="0.8"/>
+                        <text x="100" y="280" font-family="Playfair Display" font-size="14" text-anchor="middle" fill="#333">SERENITY</text>
+                        
+                        <defs>
+                            <linearGradient id="liquidGradient" x1="100" y1="180" x2="100" y2="399" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#8FBC8F" stop-opacity="0.8"/>
+                                <stop offset="1" stop-color="#2F4F4F" stop-opacity="0.9"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+
+                    <!-- Floating Leaf -->
+                    <div class="floating-element leaf" style="top: 10%; left: -20px;">🌿</div>
+                    <div class="floating-element sparkle" style="bottom: 20%; right: -10px;">✨</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features/Philosophy -->
+        <section id="about" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Our Philosophy</span>
+                    <h2>Pure. Potent. <em>Purposeful.</em></h2>
+                </div>
+                
+                <div class="features-grid">
+                    <article class="card card--glass feature-card">
+                        <div class="icon-box">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h3>Organic Sourcing</h3>
+                        <p>We partner directly with sustainable farms to ensure the highest vibrational quality of every plant.</p>
+                    </article>
+                    
+                    <article class="card card--glass feature-card">
+                        <div class="icon-box">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                        </div>
+                        <h3>Cruelty Free</h3>
+                        <p>Our commitment to wellness extends to every living being. Never tested on animals, always kind.</p>
+                    </article>
+                    
+                    <article class="card card--glass feature-card">
+                        <div class="icon-box">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                        </div>
+                        <h3>Small Batch</h3>
+                        <p>Hand-poured in limited quantities to guarantee freshness and potency in every bottle.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Collection -->
+        <section id="collection" class="products">
+            <div class="container">
+                <div class="products-header">
+                    <div class="section-header">
+                        <span class="section-label">Curated Essentials</span>
+                        <h2>The Collection</h2>
+                    </div>
+                    
+                    <!-- Filter Controls -->
+                    <div class="filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="oil">Oils</button>
+                        <button class="filter-btn" data-filter="mist">Mists</button>
+                        <button class="filter-btn" data-filter="kit">Ritual Kits</button>
+                    </div>
+                </div>
+
+                <div class="product-grid">
+                    <!-- Product 1 -->
+                    <article class="product-card" data-category="oil">
+                        <div class="product-image-wrapper">
+                            <div class="product-img" style="background: #E8F0E9;"></div>
+                            <span class="badge">Bestseller</span>
+                            <button class="btn-icon-float" aria-label="Add to wishlist">♡</button>
+                            <button class="add-cart-btn" onclick="addToCart()">Add to Cart</button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Forest Bath</h3>
+                            <p class="product-desc">Cedarwood, Pine, Balsam</p>
+                            <div class="product-footer">
+                                <span class="price">$42.00</span>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 2 -->
+                    <article class="product-card" data-category="mist">
+                        <div class="product-image-wrapper">
+                            <div class="product-img" style="background: #FDF2E9;"></div>
+                            <button class="btn-icon-float" aria-label="Add to wishlist">♡</button>
+                            <button class="add-cart-btn" onclick="addToCart()">Add to Cart</button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Linen Mist</h3>
+                            <p class="product-desc">Lavender, Chamomile</p>
+                            <div class="product-footer">
+                                <span class="price">$28.00</span>
+                                <div class="rating">★★★★☆</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 3 -->
+                    <article class="product-card" data-category="oil">
+                        <div class="product-image-wrapper">
+                            <div class="product-img" style="background: #E6E6FA;"></div>
+                            <span class="badge">New</span>
+                            <button class="btn-icon-float" aria-label="Add to wishlist">♡</button>
+                            <button class="add-cart-btn" onclick="addToCart()">Add to Cart</button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Clarity Blend</h3>
+                            <p class="product-desc">Rosemary, Lemon, Peppermint</p>
+                            <div class="product-footer">
+                                <span class="price">$36.00</span>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 4 -->
+                    <article class="product-card" data-category="kit">
+                        <div class="product-image-wrapper">
+                            <div class="product-img" style="background: #FAF9F6;"></div>
+                            <button class="btn-icon-float" aria-label="Add to wishlist">♡</button>
+                            <button class="add-cart-btn" onclick="addToCart()">Add to Cart</button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Travel Ritual Set</h3>
+                            <p class="product-desc">3 x 5ml Oils + Roller</p>
+                            <div class="product-footer">
+                                <span class="price">$55.00</span>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="text-center" style="margin-top: 3rem;">
+                    <a href="#" class="btn btn--outline">View All Products</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="rituals" class="testimonials">
+            <div class="container">
+                <div class="testimonial-wrapper">
+                    <div class="testimonial-content glass-panel">
+                        <svg class="quote-icon" width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                        <p class="testimonial-text">"I've never experienced aromatherapy quite like this. The Forest Bath oil feels like stepping into an ancient grove. It grounds me instantly."</p>
+                        <div class="author">
+                            <strong>Elena R.</strong>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                    <!-- Decorative Side Elements -->
+                    <div class="testimonial-deco">
+                        <div class="circle"></div>
+                        <div class="circle small"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section id="contact" class="newsletter">
+            <div class="container">
+                <div class="newsletter-box">
+                    <div class="newsletter-content">
+                        <h2>Join the Ritual</h2>
+                        <p>Receive 10% off your first order and weekly wellness wisdom.</p>
+                        <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Subscribed successfully!');">
+                            <div class="input-group">
+                                <input type="email" placeholder="Your email address" required>
+                                <button type="submit" class="btn btn--primary">Join</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo-text">The Scent.</span>
+                    <p>Harnessing the power of nature for modern wellbeing.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">Essential Oils</a></li>
+                        <li><a href="#">Blends</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Follow</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 The Scent. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <span id="toast-message">Item added to cart</span>
+    </div>
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <script src="main.js"></script>
+</body>
+</html>
