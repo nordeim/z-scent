@@ -435,6 +435,7 @@ select {
   color: var(--color-gold);
   margin-bottom: var(--space-3xs);
   opacity: 0.6;
+  text-shadow: 0 1px 1px rgba(42, 45, 38, 0.3);
   transition: opacity var(--transition-fast);
 }
 
@@ -1000,7 +1001,7 @@ select {
 }
 
 .hero__title-word--emph {
-  color: var(--color-gold);
+  color: var(--color-gold-dark);
   font-weight: 400;
   position: relative;
 }
@@ -1653,7 +1654,7 @@ select {
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--color-gold-dark);
 }
 
 .section-label--light {
@@ -1949,7 +1950,7 @@ select {
   font-family: var(--font-body);
   font-size: var(--text-sm);
   font-style: italic;
-  color: var(--color-gold);
+  color: var(--color-gold-dark);
   margin-bottom: var(--space-xs);
 }
 
@@ -1980,6 +1981,7 @@ select {
 .essence-card__humour-icon {
   font-size: var(--text-lg);
   color: var(--color-gold);
+  text-shadow: 0 1px 1px rgba(42, 45, 38, 0.3);
 }
 
 .essence-card__humour-label {

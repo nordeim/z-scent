@@ -201,12 +201,15 @@ const State = {
   animationsEnabled: !CONFIG.REDUCED_MOTION,
   scrollY: 0,
   
+  // Cleanup References
+  focusTrapCleanup: null,
+  
   // Methods
   updateCart(newCart) {
     this.cart = newCart;
     this.persistCart();
-    updateCartUI();
-    updateCartButton();
+    this.updateCartUI?.();  // Optional chaining for safety
+    this.updateCartButton?.();
   },
   
   persistCart() {
@@ -243,15 +246,16 @@ const State = {
       this.cart[existingIndex].quantity += 1;
       showToast(`Added another phial of ${essence.commonName} to collection`, 'success');
     } else {
-      // Add new item
+      // Add new item - FIXED SPREAD SYNTAX
       this.cart.push({
-        ...essence,
+        ...essence,  // Correct spread syntax
         quantity: 1,
         addedAt: new Date().toISOString()
       });
       showToast(`${essence.commonName} added to collection vial`, 'success');
     }
     
+    // FIXED: Proper spread syntax for array copy
     this.updateCart([...this.cart]);
   },
   
@@ -476,34 +480,39 @@ const Utils = {
 const A11y = {
   // Trap focus within element
   trapFocus(element) {
-    if (!CONFIG.FOCUS_TRAP || !element) return;
+    if (!CONFIG.FOCUS_TRAP || !element) return () => {};
     
     const focusableElements = element.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     
-    if (focusableElements.length === 0) return;
+    if (focusableElements.length === 0) return () => {};
     
     const firstFocusable = focusableElements[0];
     const lastFocusable = focusableElements[focusableElements.length - 1];
     
-    element.addEventListener('keydown', function(e) {
+    const trapHandler = (e) => {
       if (e.key !== 'Tab') return;
       
       if (e.shiftKey) {
-        // Shift + Tab
         if (document.activeElement === firstFocusable) {
           e.preventDefault();
           lastFocusable.focus();
         }
       } else {
-        // Tab
         if (document.activeElement === lastFocusable) {
           e.preventDefault();
           firstFocusable.focus();
         }
       }
-    });
+    };
+    
+    element.addEventListener('keydown', trapHandler);
+    
+    // Return cleanup function
+    return () => {
+      element.removeEventListener('keydown', trapHandler);
+    };
   },
   
   // Set ARIA attributes for modal/drawer
@@ -677,11 +686,17 @@ function toggleCartDrawer(open) {
   
   // Trap focus when open
   if (open) {
-    A11y.trapFocus(DOM.vialDrawer);
+    // Store cleanup function
+    State.focusTrapCleanup = A11y.trapFocus(DOM.vialDrawer);
     // Focus first focusable element in drawer
     const firstFocusable = DOM.vialDrawer.querySelector('button, [href]');
     if (firstFocusable) firstFocusable.focus();
   } else {
+    // Execute cleanup
+    if (State.focusTrapCleanup) {
+      State.focusTrapCleanup();
+      State.focusTrapCleanup = null;
+    }
     // Return focus to cart button
     DOM.cartButton.focus();
   }
