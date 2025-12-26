@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Scent - A sensory journey for the soul. Luxury aromatherapy redefined.">
+    <title>The Scent | Sensory Wellness</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Global Noise Overlay for Texture -->
+    <div class="noise-overlay"></div>
+
+    <!-- Spotlight Effect Container (Canvas) -->
+    <div id="spotlight"></div>
+
+    <!-- Navigation -->
+    <nav class="nav-layer">
+        <div class="container nav-container">
+            <a href="#" class="brand-logo">
+                <span>THE SCENT</span>
+            </a>
+            
+            <div class="nav-links desktop">
+                <a href="#collection" class="nav-link magnetic">Collection</a>
+                <a href="#philosophy" class="nav-link magnetic">Philosophy</a>
+                <a href="#journal" class="nav-link magnetic">Journal</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="icon-btn magnetic" aria-label="Cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 01-8 0"></path></svg>
+                    <span class="cart-indicator">2</span>
+                </button>
+                <button class="menu-toggle magnetic" aria-label="Menu">
+                    <span>Menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        
+        <!-- Hero Section: Editorial & Asymmetric -->
+        <section class="hero">
+            <div class="hero-bg">
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+                <div class="orb orb-3"></div>
+            </div>
+
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <span class="eyebrow">Est. 2024 • Los Angeles</span>
+                    <h1 class="hero-title">
+                        Botanical <br>
+                        <span class="italic">Alchemy</span>
+                    </h1>
+                    <p class="hero-sub">
+                        A curated collection of essential oils designed to transform your space and state of mind.
+                    </p>
+                    <div class="hero-cta-wrapper">
+                        <a href="#collection" class="btn-luxe magnetic">
+                            <span>Explore the Collection</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- CSS Art Product Showcase -->
+                <div class="hero-visual">
+                    <div class="product-art-container">
+                        <!-- Abstract Bottle 1 -->
+                        <div class="glass-bottle b-1">
+                            <div class="liquid liquid-1"></div>
+                            <div class="reflection"></div>
+                            <div class="label">
+                                <span>No. 01</span>
+                                <span>Clarity</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Abstract Bottle 2 (Background) -->
+                        <div class="glass-bottle b-2">
+                            <div class="liquid liquid-2"></div>
+                            <div class="reflection"></div>
+                        </div>
+
+                        <!-- Leaf Elements -->
+                        <div class="floating-leaf l-1">🌿</div>
+                        <div class="floating-leaf l-2">🍂</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marquee: Infinite Rhythm -->
+        <div class="marquee-section">
+            <div class="marquee-track">
+                <span>Pure Essential Oils</span>
+                <span>•</span>
+                <span>Small Batch Production</span>
+                <span>•</span>
+                <span>Sustainable Sourcing</span>
+                <span>•</span>
+                <span>Pure Essential Oils</span>
+                <span>•</span>
+                <span>Small Batch Production</span>
+                <span>•</span>
+                <span>Sustainable Sourcing</span>
+                <span>•</span>
+            </div>
+        </div>
+
+        <!-- Philosophy: Large Imagery & Asymmetry -->
+        <section id="philosophy" class="philosophy">
+            <div class="container">
+                <div class="phil-grid">
+                    <div class="phil-text sticky-col">
+                        <span class="eyebrow">The Philosophy</span>
+                        <h2>Rooted in <span class="italic">Nature</span>,<br>Crafted by Hand.</h2>
+                        <p>We believe that true wellness begins with intention. Our oils are not manufactured; they are coaxed from the earth using time-honored distillation methods that preserve the plant's soul.</p>
+                        <br>
+                        <p>Every drop is a promise of purity, designed to bring the serenity of the forest into the chaos of the modern world.</p>
+                        <br>
+                        <a href="#" class="text-link magnetic">Read our story <span>→</span></a>
+                    </div>
+                    <div class="phil-images">
+                        <!-- CSS Generated "Image" -->
+                        <div class="art-card art-1">
+                            <div class="art-content">
+                                <h3>01. Source</h3>
+                                <p>Global botanical farms</p>
+                            </div>
+                        </div>
+                        <div class="art-card art-2">
+                            <div class="art-content">
+                                <h3>02. Distill</h3>
+                                <p>Slow copper extraction</p>
+                            </div>
+                        </div>
+                        <div class="art-card art-3">
+                            <div class="art-content">
+                                <h3>03. Blend</h3>
+                                <p>Master perfumer touch</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collection: High-End Grid -->
+        <section id="collection" class="collection">
+            <div class="container">
+                <div class="col-header">
+                    <h2>The Collection</h2>
+                    <div class="filters">
+                        <button class="filter active">All</button>
+                        <button class="filter">Oils</button>
+                        <button class="filter">Diffusers</button>
+                    </div>
+                </div>
+
+                <div class="product-grid">
+                    <!-- Product Card 1 -->
+                    <article class="product-card luxe-card">
+                        <div class="p-image">
+                            <div class="p-art p-art-1"></div>
+                            <div class="p-overlay">
+                                <button class="btn-circle magnetic" onclick="addToCart()">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                                </button>
+                                <span>Quick View</span>
+                            </div>
+                        </div>
+                        <div class="p-details">
+                            <h3>Forest Ground</h3>
+                            <div class="p-meta">
+                                <span>$145.00</span>
+                                <span>Cedar • Moss</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product Card 2 -->
+                    <article class="product-card luxe-card">
+                        <div class="p-image">
+                            <div class="p-art p-art-2"></div>
+                            <div class="p-overlay">
+                                <button class="btn-circle magnetic" onclick="addToCart()">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                                </button>
+                                <span>Quick View</span>
+                            </div>
+                        </div>
+                        <div class="p-details">
+                            <h3>Golden Hour</h3>
+                            <div class="p-meta">
+                                <span>$120.00</span>
+                                <span>Bergamot • Amber</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product Card 3 -->
+                    <article class="product-card luxe-card">
+                        <div class="p-image">
+                            <div class="p-art p-art-3"></div>
+                            <div class="p-overlay">
+                                <button class="btn-circle magnetic" onclick="addToCart()">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                                </button>
+                                <span>Quick View</span>
+                            </div>
+                        </div>
+                        <div class="p-details">
+                            <h3>Driftwood</h3>
+                            <div class="p-meta">
+                                <span>$135.00</span>
+                                <span>Salt • Wood</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter: Minimalist & Impactful -->
+        <section class="newsletter-luxe">
+            <div class="container">
+                <div class="newsletter-inner glass-panel">
+                    <h2>Join the Inner Circle</h2>
+                    <p>Receive first access to limited drops and wellness rituals.</p>
+                    <form class="nl-form" onsubmit="event.preventDefault();">
+                        <div class="input-wrap">
+                            <input type="email" placeholder="Email Address" required>
+                            <button type="submit" class="submit-arrow">→</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer-luxe">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <span class="brand-logo">THE SCENT.</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Pinterest</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="copyright">
+                    &copy; 2024. Designed with Intention.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
